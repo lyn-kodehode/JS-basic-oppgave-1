@@ -114,14 +114,25 @@ håndterer alle tilfeller korrekt.
 let userName = "h ";
 let userAge = 18;
 let userIsLoggedIn = false;
-let userIsBlocked = false;
+let userIsBlocked = "";
 let goToPage = "";
 
 // Skriv koden for oppgave 4 her
-if (userName !== " " && userAge >= 18 && !userIsBlocked) {
+// STRICT EQUALITY ON userISBlocked
+// NO ACCESS is given
+if (userName !== " " && userAge >= 18 && userIsBlocked === false) {
   userIsLoggedIn = true;
   goToPage = "/home";
   console.log(`https://my_website.com${goToPage}`);
+  console.log("Welcome to your homepage!");
+} else console.log("Sorry! You cannot log-in.");
+
+// IMPLICIT EQUALITY ON userISBlocked
+// ACCESS is still given
+if (userName !== " " && userAge >= 18 && !userIsBlocked) {
+  userIsLoggedIn = true;
+  goToPage = "/home";
+  console.log(`https://www.my_website.com${goToPage}`);
   console.log("Welcome to your homepage!");
 } else console.log("Sorry! You cannot log-in.");
 
