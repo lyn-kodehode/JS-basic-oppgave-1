@@ -111,7 +111,7 @@ Prøv å endre verdiene på variablene for å sikre at IF/ELSE-setningen din
 håndterer alle tilfeller korrekt.
 ******************************************************************************/
 
-let userName = "h ";
+let userName = "";
 let userAge = 18;
 let userIsLoggedIn = false;
 let userIsBlocked = "";
@@ -120,7 +120,7 @@ let goToPage = "";
 // Skriv koden for oppgave 4 her
 // STRICT EQUALITY ON userISBlocked
 // NO ACCESS is given
-if (userName !== " " && userAge >= 18 && userIsBlocked === false) {
+if (userName !== "" && userAge >= 18 && userIsBlocked === false) {
   userIsLoggedIn = true;
   goToPage = "/home";
   console.log(`https://my_website.com${goToPage}`);
